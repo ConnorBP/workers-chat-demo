@@ -3,5 +3,11 @@
   "description": "An edge chat service that runs on Cloudflare Workers using Durable Objects",
   "version": "1.0.0",
   "module": "./src/chat.mjs",
-  "private": true
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev --https-key-path ./devkey.pem --https-cert-path ./devcert.pem --local-protocol https --port 443"
+  },
+  "devDependencies": {
+    "wrangler": "^3.99.0"
+  }
 }
